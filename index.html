@@ -5,48 +5,127 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="index.css" />
     <title>Parcial 1</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand">Restaurant & Lounge</a>
-        <div class="collapse navbar-collapse"></div>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-        <a class="navbar/brand"
-          ><img src="carrito.png" class="img-responsive cart"
-        /></a>
-        <a class="navbar-brand" id="shopItems">0 items</a>
-      </div>
-    </nav>
+    <div class="container">
+      <header>
+        <nav class="navbar navbar-expand-lg">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="navbar-brand navbarText" id="title">
+                Restaurant & Lounge
+              </li>
+            </ul>
+          </div>
+          <a class="navbar-brand" id="carrito"
+            ><img src="carrito.png" class="img-responsive cart"
+          /></a>
+          <a class="navbar-brand navbarText" id="shopItems">0 items</a>
+        </nav>
+      </header>
+      <main>
+        <img
+          src="banner.png"
+          class="img-responsive center-block"
+          alt="Responsive image"
+        /><br />
+        <hr />
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link active" id="1" style="cursor: pointer"
+                  >Burgers</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" id="2" style="cursor: pointer"
+                  >Tacos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" id="3" style="cursor: pointer"
+                  >Salads</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" id="4" style="cursor: pointer"
+                  >Desserts</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" id="5" style="cursor: pointer"
+                  >Drinks & Sides</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <hr />
+        <div id="cards"></div>
+        <div id="checkout"></div>
+        <!-- Modal -->
+        <div class="modal" id="cancelModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Cancel the order</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Are you sure about canceling the order?</p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  data-dismiss="modal"
+                  id="cancelOrder"
+                >
+                  Yes, I want to cancel the order
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  No, i want to continue adding products
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <p class="text-center font-weight-bold">
+          Contact us: +57 3102105253 - info@restaurant.com - @restaurant
+        </p>
+      </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
   </body>
-  <div class="container-fluid text-center">
-    <img
-      src="banner.png"
-      class="img-responsive center-block"
-      alt="Responsive image"
-    />
-    <table class="table">
-      <br />
-      <thead></thead>
-      <tbody>
-        <tr>
-          <th id="1">Burgers</th>
-          <th id="2">Tacos</th>
-          <th id="3">Salads</th>
-          <th id="4">Desserts</th>
-          <th id="5">Drinks & Sides</th>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="container-fluid" id="cards"></div>
-  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <script src="main.js"></script>
 </html>

@@ -4,3 +4,23 @@
   max-height: 70px;
   max-width: 250px;
 }
+
+.cardimg {
+  height: auto;
+  width: auto;
+  max-height: 250px;
+  max-width: 250px;
+}
+
+#title {
+  font-family: "Satisfy", cursive;
+  font-size: 2em;
+}
+
+.navbarText {
+  color: black;
+}
+
+.nav-link {
+  padding: 15px;
+}
